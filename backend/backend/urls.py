@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from users.views import signup,login
+from transactions.views import add_transaction
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/signup/', signup),
     path('api/login/', login),
+    path('api/add-transaction/', add_transaction),
 ]
