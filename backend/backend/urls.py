@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from users.views import signup,login
-from transactions.views import add_transaction
+from transactions.views import add_transaction,get_transactions,category_summary,filtered_transactions
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/signup/', signup),
     path('api/login/', login),
     path('api/add-transaction/', add_transaction),
+    path('api/transactions/', get_transactions),
+    path('api/category-summary/', category_summary),
+    path('api/filter-transactions/', filtered_transactions),
 ]
